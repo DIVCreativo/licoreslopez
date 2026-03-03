@@ -111,6 +111,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Auto-slide
     autoSlideInterval = setInterval(nextSlide, 5000);
+
+    // --- Image Popup ---
+    const imagePopup = document.getElementById('image-popup');
+    const imagePopupImg = document.getElementById('image-popup-img');
+    const imagePopupClose = document.getElementById('image-popup-close');
+
+    if (imagePopup) {
+      document.querySelectorAll('.slide img').forEach(img => {
+        img.addEventListener('click', () => {
+          imagePopupImg.src = img.src;
+          imagePopup.classList.add('active');
+          clearInterval(autoSlideInterval); // Pause slider
+        });
+      });
+
+      const closePopup = () => {
+        imagePopup.classList.remove('active');
+        resetInterval(); // Resets and starts the interval
+      };
+
+      imagePopupClose.addEventListener('click', closePopup);
+      imagePopup.addEventListener('click', (e) => {
+        if (e.target === imagePopup) {
+          closePopup();
+        }
+      });
+    }
   }
 
   // --- Hamburger Menu ---
