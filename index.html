@@ -27,7 +27,7 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="logo">Licores<span>Lopez</span></a>
+      <a href="index.html" class="logo"><img src="images/LOGO-lopez.png" alt="Licores Lopez"></a>
       <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -93,17 +93,22 @@
     </div>
   </section>
 
-  <!-- Promo Banner Section -->
-  <section id="oferta" class="promo-banner js-scroll animate-hidden" data-animation="animate-fade-in"
-    style="padding: 0;">
-    <div class="container" style="width: 100%;">
-      <div class="promo-content js-scroll animate-hidden delay-100" data-animation="animate-slide-right">
-        <span class="promo-tag">Oferta del mes</span>
-        <h2>Caja de Beefeater</h2>
-        <p style="margin-bottom: 1.5rem;"><strong>20% de dto.</strong> por la compra de 6 uds.</p>
-        <a href="tel:+34900123456" class="btn btn-primary">
-          <i class="fa-solid fa-plus"></i> info
-        </a>
+  <!-- Promo Slider Section -->
+  <section id="oferta" class="promo-slider js-scroll animate-hidden" data-animation="animate-fade-in">
+    <div class="slider-container">
+      <div class="slider-track" id="slider-track">
+        <div class="slide"><img src="images/promociones/ruavieja.jpg" alt="Promoción Ruavieja"></div>
+        <div class="slide"><img src="images/promociones/seagrams-black.jpg" alt="Promoción Seagrams Black"></div>
+        <div class="slide"><img src="images/promociones/surtido.jpg" alt="Promoción Surtido"></div>
+      </div>
+      <button class="slider-btn prev" id="slider-prev" aria-label="Anterior"><i
+          class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn next" id="slider-next" aria-label="Siguiente"><i
+          class="fa-solid fa-chevron-right"></i></button>
+      <div class="slider-dots" id="slider-dots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
       </div>
     </div>
   </section>
@@ -954,8 +959,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="color:white; margin-bottom: 1rem; display: block;">Licores<span
-              class="text-accent">Lopez</span></a>
+          <a href="index.html" class="logo" style="margin-bottom: 1rem; display: block;"><img
+              src="images/LOGO-lopez.png" alt="Licores Lopez"></a>
           <p style="color: #aaa; margin-bottom: 1.5rem; max-width: 300px;">Distribución profesional y ágil de bebidas
             para la hostelería de Bizkaia.</p>
         </div>
